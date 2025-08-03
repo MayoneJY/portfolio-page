@@ -1,0 +1,705 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>남정연</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-default { background-color: rgba(84, 72, 49, 0.08); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="db6b3683-e7e2-407f-9afa-3f54eeb127b3" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="%E1%84%82%E1%85%A1%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%A7%E1%86%AB%20db6b3683e7e2407f9afa3f54eeb127b3/Mayone_-_%25EB%25B3%25B5%25EC%2582%25AC%25EB%25B3%25B8.png"/></div><h1 class="page-title">남정연</h1><p class="page-description"></p></header><div class="page-body"><div id="f07ad56b-fe49-404a-b6f2-42f0245b002d" class="column-list"><div id="8b7d87a0-3795-4c26-aa4d-e868e50898a0" style="width:50%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="d3b99949-1c7a-4384-8507-c6d52eabfbc3"><div style="font-size:1.5em"><img class="icon" src="%E1%84%82%E1%85%A1%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%A7%E1%86%AB%20db6b3683e7e2407f9afa3f54eeb127b3/github.png"/></div><div style="width:100%"><a href="https://github.com/MayoneJY">MayoneJY</a></div></figure><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="3976d3a3-0ae4-4ced-bb75-e823d41f17cf"><div style="font-size:1.5em"><span class="icon">📫</span></div><div style="width:100%"><a href="mailto:mayone6063@kakao.com">mayone6063@kakao.com</a></div></figure></div><div id="0afe5494-4f56-47b3-a484-8d138a6b37f1" style="width:50%" class="column"><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="cdd0c87b-dce7-4854-bff4-128527561261"><div style="font-size:1.5em"><span class="icon">📞</span></div><div style="width:100%"><a href="tel:01094626046">010-9462-6046 (공개용)</a></div></figure><figure class="block-color-default callout" style="white-space:pre-wrap;display:flex" id="2ca52f9a-517b-49a6-a035-3eb3e1f6dac4"><div style="font-size:1.5em"><img class="icon" src="%E1%84%82%E1%85%A1%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%A7%E1%86%AB%20db6b3683e7e2407f9afa3f54eeb127b3/LI-In-Bug.png"/></div><div style="width:100%"><a href="https://www.linkedin.com/in/%EC%A0%95%EC%97%B0-%EB%82%A8-a83050293/">남정연 (Mayone)</a></div></figure></div></div><hr id="e853236d-fb8b-4273-8940-19da16d1f29d"/><div id="2f66c565-0cba-4f0a-9529-95f1c1781fa6" class="column-list"><div id="5f069258-9471-4d0d-b93a-d6218a287ab3" style="width:25%" class="column"><h3 id="c3c93d7f-136c-405f-a310-4f42e1cc37f1" class=""> </h3><figure id="365111a4-5b53-4405-8076-b513bc64812d" class="image"><a href="%E1%84%82%E1%85%A1%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%A7%E1%86%AB%20db6b3683e7e2407f9afa3f54eeb127b3/JK_GG_hDwukH23041312501647.jpg"><img style="width:288px" src="%E1%84%82%E1%85%A1%E1%86%B7%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%8B%E1%85%A7%E1%86%AB%20db6b3683e7e2407f9afa3f54eeb127b3/JK_GG_hDwukH23041312501647.jpg"/></a></figure><p id="4c29c511-bf77-404d-bbe8-358517e9340b" class="">
+</p></div><div id="c611e9e3-e5eb-4de3-a714-153ff294aa1e" style="width:75%" class="column"><h1 id="a19caf03-5dde-4916-9acb-e1b07d9d0537" class="">어쩌다보니 에이스</h1><p id="e10e753e-50fc-43b7-a24c-fcc0f083b7a1" class="">저는 다양한 프로젝트 경험을 통해 <mark class="highlight-brown"><strong>프론트엔드 및 백엔드 개발 능력을 갖춘 소프트웨어 개발자</strong></mark>입니다.</p><p id="89ab14b3-d2d8-4c1d-abb9-313467af22dc" class="">Python을 활용해 개발한 &#x27;디스코드 뮤직 자막 봇&#x27;은 사용자들이 음악을 감상하며 실시간으로 가사를 확인할 수 있는 서비스로, 다수의 사용자에게 긍정적인 반응을 얻고,  <mark class="highlight-brown"><strong>217,166명의 6420개 서버에서 서비스</strong></mark>를 했습니다.</p><p id="44cb1dde-2d66-422f-b832-b04904ac1e9f" class="">Unity와 Arduino를 사용한 &#x27;VR 메타버스 운전면허 시험장&#x27; 프로젝트를 주도하며, 아이디어 제공부터 구현까지 전 과정을 관리한 경험이 있습니다.</p><p id="d9a4f02c-a507-475b-bcf7-1a9ec7c5ce6a" class="">또한, Java, Spring Boot, React를 이용한 교육용 게임 플랫폼을 개발했습니다.</p><p id="0eec7421-5171-4e14-9a30-14e33cf91bf4" class="">이런 경험들은 저에게 유연한 문제 해결 능력과 뛰어난 팀워크를 발휘할 준비가 되어 있음을 보여줍니다.</p><p id="e41bd3b7-3e5b-4016-b00a-c09a253a8997" class="">
+</p></div></div><hr id="bd63c7b8-7f39-4bb0-8abf-fe9930df40b2"/><div id="4338b8f5-5999-4890-bb2f-efe0090ba8ed" class="column-list"><div id="8be98b26-74ef-4584-b2fc-71aec72f93f4" style="width:33.33333333333333%" class="column"><h1 id="a9cfbeeb-ff40-4063-bd3d-3449ad9ddcb9" class="">학력</h1><p id="fad353e4-5fc3-44ff-a06a-a9b70033bf68" class="">
+</p></div><div id="fac7648c-4836-4aac-b777-3e3c33117f17" style="width:33.33333333333333%" class="column"><p id="9ca4f350-2185-4c44-b0c5-c3fcdfdcc9f0" class="">
+</p><p id="ffc981a1-9315-4ce3-8573-0057ba89b9b7" class="">경민대학교</p><p id="ce94e2e8-d7ed-4f95-94d4-84d731808718" class="">융합소프트웨어과 전문학사</p><p id="8f55a140-c3d5-4da7-92d7-90677a5fed8c" class="">2018.03 ~ 2023.02</p></div><div id="5e93a79a-3da9-46a7-9ba3-8a4c56cd45f3" style="width:33.33333333333333%" class="column"><p id="36027f47-af95-42de-a927-481ca55888b0" class="">
+</p><p id="699862b5-a881-410d-aea1-0037684a418b" class="">경민대학교</p><p id="77ad9912-d207-45e8-b351-9b387c84ce11" class="">컴퓨터소프트웨어학과 학사</p><p id="7529d9eb-792a-4be8-a31b-d16ec0e17ee3" class="">2023.03 ~ 2024.02</p></div></div><hr id="8a0f7f6f-e336-45ad-9dd5-cb5fc5fa4083"/><div id="f61845e4-e77b-4f20-9325-4b707a1ee866" class="column-list"><div id="fb3d5948-08d8-489f-8444-2ba6561aed83" style="width:37.5%" class="column"><p id="306be83d-2487-4d5d-a732-e5dc48c56b9d" class="">
+</p></div><div id="6570cab6-2811-40c3-9721-37a1fa0130ed" style="width:25%" class="column"><h1 id="90ba1953-97c6-4858-b296-418ec0fb5475" class=""><strong>AWARDS</strong></h1></div><div id="d7bc87d6-67a4-4a85-893d-b4e7f039b54f" style="width:37.499999999999986%" class="column"><p id="b3bd892a-5e2b-4994-b8d0-c943e062f09f" class="">
+</p></div></div><div id="677473dd-10d0-4f1d-bb15-70ee70d805a1" class="column-list"><div id="0d48209a-a2c4-430e-bb2b-3e4aa390c489" style="width:25%" class="column"><h2 id="5c80bd09-0fde-41b5-a578-6390ce922af5" class="">2023. 07. 25</h2><p id="e3cd8926-913a-4c9d-aa2a-9653104b8bc2" class="">
+</p><p id="e68a522c-21fa-4d5e-86f0-ec84d30fee08" class="">
+</p></div><div id="3d4fa3de-276c-4ce4-9a79-7bcf4332a0c9" style="width:75%" class="column"><h2 id="57cd60c6-25ab-46ff-ba75-93a8c955a49c" class=""><strong>전문기술인재장학</strong></h2><ul id="be21bd04-bbc3-40ba-bfd2-047bd1e6a95e" class="bulleted-list"><li style="list-style-type:disc">기관: 교육부, 한국장학재단</li></ul><ul id="bbc35471-b90f-48fc-a11b-f6ae00befaf9" class="bulleted-list"><li style="list-style-type:disc">위 학생은 전문지식과 직업 능력을 보유한 우수인재로서 우리나라 직업기술 분야 발전에 크게 이바지할 것으로 기대되는 바, 이에 전문기술인재장학생으로 선발하여 이 증서를 수여함</li></ul></div></div><div id="bd28b87f-e0f5-408a-ac63-86b8d51fea55" class="column-list"><div id="b8fb9c0c-67bc-4b43-b9aa-1249d17adbdc" style="width:25%" class="column"><h2 id="83177868-768f-444d-a42c-91df2e863d9d" class="">2022. 11. 02</h2><p id="bb03dabc-ca69-460b-8c64-7e2dda699572" class="">
+</p><p id="b02b4262-b9e1-4295-a799-94e18f3ca17b" class="">
+</p></div><div id="4e37f073-10c1-4bd4-a689-9ef88f84ae34" style="width:75%" class="column"><h2 id="d4176c22-dda7-4e07-82af-40d9d9c4be68" class="">🥇 교육부 장관상 (대상)</h2><ul id="127b915d-7fe5-4ca0-a067-0951fa875ebb" class="bulleted-list"><li style="list-style-type:disc">산학연계 교육과정 영상 콘텐츠 공모전</li></ul><ul id="ba40814f-641c-45b9-982b-82a06cee4b9d" class="bulleted-list"><li style="list-style-type:disc">기관: 교육부</li></ul><ul id="a37fd581-b909-4e48-8905-e3650316231e" class="bulleted-list"><li style="list-style-type:disc">전문학사과정 졸업작품 ‘VR 메타버스 운전 면허 시험장’</li></ul></div></div><div id="8c3cdba6-25fe-4255-a3b0-d92c75d17b5d" class="column-list"><div id="627d1d02-bef0-4111-b186-ee086c124b7c" style="width:25%" class="column"><h2 id="3616d24d-9017-4b2a-aef0-c9caaf42dacb" class="">2022. 12. 09</h2><p id="3a9a13e2-5fe2-4e20-a932-bc308799089c" class="">
+</p></div><div id="d93517e1-7de5-42a2-9d00-6d4db903c975" style="width:75%" class="column"><h2 id="8a148b71-b2ec-42a4-abcc-e86e358e186d" class="">🏆 게이미피케이션포럼상</h2><ul id="6de59307-1e9a-45ba-925e-967c155ed9b9" class="bulleted-list"><li style="list-style-type:disc">GGC 2022 어워드</li></ul><ul id="4ae22cca-739a-4d96-be6b-5d756e549a7a" class="bulleted-list"><li style="list-style-type:disc">기관: 글로벌게임챌린지</li></ul><ul id="1a4af590-82e2-4fc1-8cd5-915610062704" class="bulleted-list"><li style="list-style-type:disc">전문학사과정 졸업작품 ‘VR 메타버스 운전 면허 시험장’</li></ul></div></div><div id="7cc3a277-5297-48c7-8829-f94045ca3288" class="column-list"><div id="c2aaf718-5276-4efe-a7ac-a4e9eae513c5" style="width:25%" class="column"><h2 id="eb5520c0-c7cc-4d53-88ed-2f6af6b22aed" class="">2023. 02. 09</h2><p id="63608d61-f810-4451-b9a2-ed31243fb43a" class="">
+</p></div><div id="582ab974-d9ba-472b-bbac-15ab3565ff98" style="width:75%" class="column"><h2 id="c191f8f1-fece-425c-a077-8abde5f624ad" class="">표창장</h2><ul id="6c8c9e72-f95f-4f93-98d0-2fb9423855c5" class="bulleted-list"><li style="list-style-type:disc">기관: 경민대학교총동문회장</li></ul><ul id="fee17e05-b21c-4212-84f5-cde3bb04ae6b" class="bulleted-list"><li style="list-style-type:disc">품행이 단정하고 건전한 대학 문화 발전에 기여한 공이 커 표창</li></ul></div></div><div id="7b71c809-c40b-416f-8816-77bc0ff51cdd" class="column-list"><div id="62ffd089-7c58-4b61-8119-a7cad8cc1c41" style="width:25%" class="column"><h2 id="5ad0dfc5-cf20-435b-977d-6a093ace7cd8" class="">2022. 10. 17</h2><p id="6d707363-a86e-40d6-af5a-085d7ae2ce3f" class="">
+</p></div><div id="a7c8b08f-cda9-4110-adfb-7348e38165f4" style="width:75%" class="column"><h2 id="259ef376-011b-4e66-93e1-8aeee57894af" class="">자랑스런 경민인</h2><ul id="a52d4914-595c-4d24-b0ec-115c1d1fc543" class="bulleted-list"><li style="list-style-type:disc">기관: 경민대학교</li></ul><ul id="ad5b7ffa-070d-4e00-abf0-6be74a651ad7" class="bulleted-list"><li style="list-style-type:disc">학우의 귀감이 되어 대학의 명예를 높이고 대학발전에 기여한 공로</li></ul></div></div><p id="bd6e7ec3-f35a-4c52-af67-acf484680a90" class="">
+</p><hr id="dfb7bae2-8396-44b2-b4cb-bde5d3c9a426"/><div id="68ad4580-6e29-4590-a16d-c2c700c79d8c" class="column-list"><div id="821217ea-6fa9-45e1-9682-076bff25d26a" style="width:41.666666666666664%" class="column"><p id="a767ff76-e81f-4104-abc1-e3b61da7d1ab" class="">
+</p></div><div id="7bb57e6c-c038-4485-bfeb-9a3f7b10bf7c" style="width:16.666666666666664%" class="column"><h1 id="559e92a8-9d4a-406b-b384-2893f93f55be" class="">SKILL</h1></div><div id="ebbe0cd8-074a-4056-9b5d-54cf9a641a58" style="width:41.666666666666664%" class="column"><p id="6ef8db84-23b1-4d78-bd2b-414cc5756fa2" class="">
+</p></div></div><div id="613f409e-27ca-4616-9d15-f0fbb60ca6b0" class="column-list"><div id="14d27251-a2ed-4b03-8520-49a5b0b28c13" style="width:25%" class="column"><p id="ed821a93-be09-45c1-8baa-96866fff49ff" class="">
+</p></div><div id="a04d822c-743d-4899-b5a3-f7e1b145fdf0" style="width:50%" class="column"><p id="ab24a975-712a-4570-8890-2a3c39f261f2" class=""><mark class="highlight-gray"><em>현재 사용 중 혹은 사용했던 기술들입니다.</em></mark></p></div><div id="697d1fb7-0d25-4a8e-bbb8-9b58af4f6cec" style="width:25%" class="column"><p id="985fd609-5ad8-4723-86d2-f693a12a3740" class="">
+</p></div></div><div id="3eab3f13-3224-4bf5-9e84-1605b4a1ffe9" class="column-list"><div id="55e463d3-8125-4fac-aa90-4fcc9253235b" style="width:31.25%" class="column"><h2 id="df6bd9d0-a436-43ce-9134-76b71b6a794d" class="">Backend</h2></div><div id="c2295172-9989-4fc1-baf3-318969c81e29" style="width:68.75%" class="column"><ul id="a193cd9a-e102-46bd-9d81-31b367838da8" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid"><mark class="highlight-brown"><strong>Python</strong></mark></span>, Java, Node.js, <mark class="highlight-default">PHP</mark></li></ul><ul id="fd6bbe12-2801-4fe5-ae10-495b9af74740" class="bulleted-list"><li style="list-style-type:disc">Sping Boot</li></ul><ul id="2a5bc84a-0ecd-402a-bab8-18efbf1ffb6a" class="bulleted-list"><li style="list-style-type:disc">Unity, Android, Postman</li></ul></div></div><div id="2f7759c8-dfbb-44ed-ae24-c4ea54dc2669" class="column-list"><div id="5a8ed8c3-5560-487e-b8d8-d7f75d3df061" style="width:31.25%" class="column"><h2 id="dc6a68c7-a35b-48b8-a030-1f95895ff0ab" class="">DevOps</h2></div><div id="4f4e9620-6531-4451-9246-b00d8a64e338" style="width:68.75%" class="column"><ul id="832bb4c6-b177-4b9c-bd23-e1fe6a0798d9" class="bulleted-list"><li style="list-style-type:disc">Mysql, <span style="border-bottom:0.05em solid"><mark class="highlight-brown"><strong>MariaDB</strong></mark></span></li></ul><ul id="e7e8e004-2e68-4838-8403-4c187c6eccf6" class="bulleted-list"><li style="list-style-type:disc">Tomcat</li></ul><ul id="84e36f77-1ad5-4346-adab-031e3222cf1b" class="bulleted-list"><li style="list-style-type:disc">Linux Ubuntu</li></ul></div></div><div id="425ca89d-5a43-4af2-a875-81b0ea2179dd" class="column-list"><div id="152f3d4a-5649-4d12-827c-304b75a8be92" style="width:31.25%" class="column"><h2 id="0a83823e-8a01-4d58-a9c3-59ee900cb292" class="">Frontend</h2></div><div id="b54fae83-a74c-437a-ac41-33fdf1747e49" style="width:68.75%" class="column"><ul id="e58601ba-4d95-4b9e-aec2-8bb408fcb960" class="bulleted-list"><li style="list-style-type:disc">React, <span style="border-bottom:0.05em solid"><mark class="highlight-brown"><strong>javascript</strong></mark></span>, Bootstrap</li></ul></div></div><div id="f4aa2985-32fe-4904-889e-cf0f4c88b736" class="column-list"><div id="3f2650ba-431b-4589-a08c-dcc9f0166b8c" style="width:31.25%" class="column"><h2 id="0808596e-d1b1-41ab-a70e-a048d439dafc" class="">etc</h2></div><div id="d8590ffd-7181-47bf-89a3-b359da5fbd2b" style="width:68.75%" class="column"><ul id="fcd6e4e5-34f7-496e-8aa8-5db359da1df4" class="bulleted-list"><li style="list-style-type:disc">Visual Studio Code, Eclipse, Notion, Figma</li></ul><ul id="8799cebf-42d6-4dd7-b2fc-18ef347d1bf6" class="bulleted-list"><li style="list-style-type:disc">After Effects, Photoshop</li></ul><ul id="da492243-d733-45fa-91d4-781e9119d05d" class="bulleted-list"><li style="list-style-type:disc">FileZilla</li></ul></div></div><p id="5a3efb9b-0852-42b3-b31f-f40ca5110990" class="">
+</p><hr id="c66b9025-154e-472d-87f8-72e0d5485f74"/><div id="57ac2476-2ecc-43f9-8d00-71aafe8e1523" class="column-list"><div id="396d4bd9-26c6-43ac-829c-f44e1d0f159d" style="width:33.33333333333333%" class="column"><p id="8184fd3f-7af7-4595-b94e-4b9264b1e554" class="">
+</p></div><div id="7c0815fd-cd4f-49c9-8ef0-a32ad8d19095" style="width:29.166666666666664%" class="column"><h1 id="0fabfd00-d6f7-4805-b223-5781fa59251c" class=""><strong>Outsourcing</strong></h1></div><div id="435269d6-5581-418f-97fd-b148e3b8529e" style="width:37.5%" class="column"><p id="bb9f1947-1893-4fc4-b757-3a11ccf852f2" class="">
+</p></div></div><div id="6e64b9ce-5563-4209-86ba-5a9b58f55304" class="collection-content"><h4 class="collection-title">외주 프로젝트</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><div data-testid="/icons/font_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/font_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/font_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>이름</th><th><span class="icon property-icon"><div data-testid="/icons/description_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/description_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/description_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>Short description</th><th><span class="icon property-icon"><div data-testid="/icons/list_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/list_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/list_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>Skill</th><th><span class="icon property-icon"><div data-testid="/icons/link_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/link_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/link_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>URL</th><th><span class="icon property-icon"><div data-testid="/icons/list_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/list_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/list_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>역할</th><th><span class="icon property-icon"><div data-testid="/icons/calendar_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/calendar_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/calendar_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>진행 기간</th></tr></thead><tbody><tr id="3d3638a0-8d52-4399-87c0-52dae8086f9e"><td class="cell-title"><a href="https://www.notion.so/EBS-MATH-3d3638a08d52439987c052dae8086f9e?pvs=21"><span class="icon">🎮</span>EBS MATH 제곱근 레이싱</a></td><td class="cell-FY`E"><em><mark class="highlight-gray">EBS Math라는 교육 콘텐츠의 플래시 게임을 JavaScript로 재개발</mark></em></td><td class="cell-MmF;"><span class="selected-value select-value-color-purple">Figma</span><span class="selected-value select-value-color-red">Javascript</span></td><td class="cell-NrnP"><a href="https://www.ebsmath.co.kr/mathquiz/Main?tab=1" class="url-value">https://www.ebsmath.co.kr/mathquiz/Main?tab=1</a></td><td class="cell-MX^~"><span class="selected-value select-value-color-brown">Front End</span></td><td class="cell-QVKA"><time>@2023년 3월 26일 → 2023년 6월 15일</time></td></tr><tr id="08cb6783-9d30-4e92-8d6b-a56146a7f4ee"><td class="cell-title"><a href="https://www.notion.so/EBS-MATH-08cb67839d304e928d6ba56146a7f4ee?pvs=21"><span class="icon">🎮</span>EBS MATH 삼각형 닮음 카드 게임</a></td><td class="cell-FY`E"><em><mark class="highlight-gray">EBS Math라는 교육 콘텐츠의 플래시 게임을 JavaScript로 재개발</mark></em></td><td class="cell-MmF;"><span class="selected-value select-value-color-purple">Figma</span><span class="selected-value select-value-color-red">Javascript</span></td><td class="cell-NrnP"><a href="https://www.ebsmath.co.kr/mathquiz/Main?tab=1" class="url-value">https://www.ebsmath.co.kr/mathquiz/Main?tab=1</a></td><td class="cell-MX^~"><span class="selected-value select-value-color-brown">Front End</span></td><td class="cell-QVKA"><time>@2023년 3월 26일 → 2023년 6월 15일</time></td></tr><tr id="05e59523-426e-4acf-88ad-5bcad1b9fdd7"><td class="cell-title"><a href="https://www.notion.so/redytek-05e59523426e4acf88ad5bcad1b9fdd7?pvs=21"><span class="icon">📃</span>redytek 홈페이지</a></td><td class="cell-FY`E"><mark class="highlight-gray"><em>redytec의 공식 홈페이지의 BackEnd 부분을 개발</em></mark></td><td class="cell-MmF;"><span class="selected-value select-value-color-red">Javascript</span><span class="selected-value select-value-color-default">PHP</span></td><td class="cell-NrnP"><a href="http://redytek.co.kr/" class="url-value">http://redytek.co.kr/</a></td><td class="cell-MX^~"><span class="selected-value select-value-color-blue">Back End</span></td><td class="cell-QVKA"><time>@2023년 3월 18일 → 2023년 4월 6일</time></td></tr></tbody></table><br/><br/></div><div id="cdbe4459-2b16-44ef-a0f3-f8a3579fcdf8" class="column-list"><div id="a85b92a6-50eb-4b51-898a-04281c9901f4" style="width:41.666666666666664%" class="column"><p id="70416b3d-278d-4387-aebf-6b689f42621f" class="">
+</p></div><div id="969544aa-d860-4dee-9872-c4a35796cae9" style="width:25%" class="column"><h1 id="a9cfaf43-4eb3-4e3e-b27a-0e6cc2efcf9e" class="">PROJECT</h1></div><div id="bdd4ac1d-c50b-4b79-a1e0-8b9d0796612d" style="width:33.33333333333333%" class="column"><p id="c3bbcd54-03a0-4a5a-bc61-d6d2a0a10e9c" class="">
+</p></div></div><div id="5ea73f93-2dce-4a16-ba88-6260625fa7be" class="collection-content"><h4 class="collection-title">개인 프로젝트</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><div data-testid="/icons/font_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/font_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/font_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>이름</th><th><span class="icon property-icon"><div data-testid="/icons/list_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/list_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/list_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>Skill</th><th><span class="icon property-icon"><div data-testid="/icons/link_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/link_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/link_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>URL</th><th><span class="icon property-icon"><div data-testid="/icons/calendar_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/calendar_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/calendar_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>진행 기간</th><th><span class="icon property-icon"><div data-testid="/icons/description_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/description_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/description_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>한줄 소개</th></tr></thead><tbody><tr id="ffff2736-63fe-810a-a3e2-de9f69e2daa0"><td class="cell-title"><a href="https://www.notion.so/ffff273663fe810aa3e2de9f69e2daa0?pvs=21"><span class="icon">🎵</span>디스코드 뮤직 자막 봇</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-blue">Python</span><span class="selected-value select-value-color-default">개인 프로젝트</span></td><td class="cell-A^RZ"><a href="https://discord.mayonedev.com/" class="url-value">https://discord.mayonedev.com/</a></td><td class="cell-WkG_"><time>@2018년 6월 1일 → 2099년 12월 31일</time></td><td class="cell-U&gt;EJ">디스코드에서 친구들과 통화하며 음악을 감상할 수 있게 해주는 서비스</td></tr><tr id="244f2736-63fe-80f4-b509-edb71c4ca0de"><td class="cell-title"><a href="https://www.notion.so/top-solved-244f273663fe80f4b509edb71c4ca0de?pvs=21">top solved</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-blue">Python</span></td><td class="cell-A^RZ"><a href="https://github.com/MayoneJY/top-solved" class="url-value">https://github.com/MayoneJY/top-solved</a></td><td class="cell-WkG_"><time>@2025년 7월 24일 → 2025년 7월 25일</time></td><td class="cell-U&gt;EJ"><a href="http://solved.ac/">solved.ac</a> 푼 문제 상위 100개 보여주는 프로필 카드</td></tr><tr id="ffff2736-63fe-81a3-8ede-c6d60096d87c"><td class="cell-title"><a href="https://www.notion.so/ffff273663fe81a38edec6d60096d87c?pvs=21"><img class="icon" src="https://www.notion.so/icons/robot_gray.svg"/>디스코드 발로란트 내전 봇</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-yellow">Javascript</span><span class="selected-value select-value-color-blue">Python</span><span class="selected-value select-value-color-default">React</span><span class="selected-value select-value-color-default">개인 프로젝트</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2024년 5월 18일 → 2024년 8월 31일</time></td><td class="cell-U&gt;EJ">디스코드 커맨드를 통해 내전 스크림을 쉽게 할 수 있는 봇</td></tr><tr id="1b8f2736-63fe-8042-82d6-c2a606e13c35"><td class="cell-title"><a href="https://www.notion.so/AI-1b8f273663fe804282d6c2a606e13c35?pvs=21">AI와 함께 개발한 네이버 증권뉴스 크롤러</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-blue">Python</span><span class="selected-value select-value-color-default">React</span><span class="selected-value select-value-color-green">mariadb</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2025년 3월 6일 → 2025년 3월 8일</time></td><td class="cell-U&gt;EJ">뉴스를 크롤러 하여 키워드 검색할 수 있는 사이트</td></tr><tr id="184f2736-63fe-80a6-bd89-e3d05fc8c841"><td class="cell-title"><a href="https://www.notion.so/WebSocket-Chat-System-184f273663fe80a6bd89e3d05fc8c841?pvs=21">WebSocket &amp; Chat System</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-yellow">Javascript</span><span class="selected-value select-value-color-orange">NestJS</span><span class="selected-value select-value-color-default">React</span><span class="selected-value select-value-color-brown">TypeORM</span><span class="selected-value select-value-color-pink">Websocket</span><span class="selected-value select-value-color-green">mariadb</span></td><td class="cell-A^RZ"><a href="https://github.com/MayoneJY/nestjs-chat" class="url-value">https://github.com/MayoneJY/nestjs-chat</a></td><td class="cell-WkG_"><time>@2025년 1월 25일 → 2025년 1월 28일</time></td><td class="cell-U&gt;EJ">실시간으로 채팅을 할 수 있는 프로젝트</td></tr><tr id="ffff2736-63fe-819b-902a-fecaded68f2c"><td class="cell-title"><a href="https://www.notion.so/Allive-ffff273663fe819b902afecaded68f2c?pvs=21"><span class="icon">📺</span>Allive</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-yellow">Javascript</span><span class="selected-value select-value-color-orange">Node.js</span><span class="selected-value select-value-color-default">React</span></td><td class="cell-A^RZ"><a href="https://live.mayonedev.com/" class="url-value">https://live.mayonedev.com/</a></td><td class="cell-WkG_"><time>@2024년 1월 16일 → 2024년 2월 4일</time></td><td class="cell-U&gt;EJ">한국의 모든 방송플랫폼을 한번에 볼 수 있는 서비스 (치지직, 트위치)</td></tr><tr id="ffff2736-63fe-8125-b592-e1cdb36b053d"><td class="cell-title"><a href="https://www.notion.so/ffff273663fe8125b592e1cdb36b053d?pvs=21">디스코드 입퇴장 알림 봇</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-blue">Python</span><span class="selected-value select-value-color-default">개인 프로젝트</span></td><td class="cell-A^RZ"><a href="https://github.com/MayoneJY/Discord-entry-exit-tts-bot" class="url-value">https://github.com/MayoneJY/Discord-entry-exit-tts-bot</a></td><td class="cell-WkG_"><time>@2023년 12월 8일</time></td><td class="cell-U&gt;EJ">음성채팅 내에서 사용자가 입/퇴장을 할 때 tts로 알려주는 봇.</td></tr><tr id="ffff2736-63fe-8180-b37c-cc46469b1344"><td class="cell-title"><a href="https://www.notion.so/ffff273663fe8180b37ccc46469b1344?pvs=21"><span class="icon">🍚</span>수락고 카카오 챗봇</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-red">Mysql</span><span class="selected-value select-value-color-brown">PHP</span><span class="selected-value select-value-color-default">개인 프로젝트</span></td><td class="cell-A^RZ"><a href="https://pf.kakao.com/_xdtxjpd" class="url-value">https://pf.kakao.com/_xdtxjpd</a></td><td class="cell-WkG_"><time>@2017년 11월 1일 → 2017년 12월 31일</time></td><td class="cell-U&gt;EJ">급식이나 날씨 버스정보를 알 수 있는 카카오 플러스 친구</td></tr><tr id="ffff2736-63fe-81fd-aeae-fa6926b17cd2"><td class="cell-title"><a href="https://www.notion.so/Chat-GPT-with-AWS-ffff273663fe81fdaeaefa6926b17cd2?pvs=21"><span class="icon">💬</span>디스코드 Chat GPT 봇 with AWS</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-blue">Python</span><span class="selected-value select-value-color-default">개인 프로젝트</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2023년 3월 14일</time></td><td class="cell-U&gt;EJ">디스코드로 Chat GPT를 사용할 수 있는 봇</td></tr><tr id="ffff2736-63fe-81e8-9a39-e60fd4d3544e"><td class="cell-title"><a href="https://www.notion.so/ffff273663fe81e89a39e60fd4d3544e?pvs=21"><span class="icon">🪖</span>중대 급 병역관리 프로그램</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-default">Excel</span><span class="selected-value select-value-color-orange">vba</span><span class="selected-value select-value-color-default">개인 프로젝트</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2019년 3월 19일 → 2020년 10월 21일</time></td><td class="cell-U&gt;EJ">중대에서 병역을 쉽게 관리할 수 있는 반자동 프로그램</td></tr><tr id="ffff2736-63fe-81e6-814e-c7f72ad35801"><td class="cell-title"><a href="https://www.notion.so/ffff273663fe81e6814ec7f72ad35801?pvs=21"><span class="icon">📄</span>티켓링크 티켓팅 메크로</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-blue">Python</span><span class="selected-value select-value-color-default">개인 프로젝트</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2023년 7월 22일</time></td><td class="cell-U&gt;EJ">티켓팅 대기열까지 자동으로 입장해주는 메크로</td></tr></tbody></table><br/><br/></div><div id="25ed5762-3855-498a-ae57-786df9f516f8" class="collection-content"><h4 class="collection-title">대학 프로젝트</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><div data-testid="/icons/font_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/font_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/font_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>이름</th><th><span class="icon property-icon"><div data-testid="/icons/list_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/list_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/list_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>Skill</th><th><span class="icon property-icon"><div data-testid="/icons/link_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/link_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/link_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>URL</th><th><span class="icon property-icon"><div data-testid="/icons/calendar_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/calendar_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/calendar_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>진행 기간</th><th><span class="icon property-icon"><div data-testid="/icons/description_gray.svg" style="width:14px;height:14px;flex-shrink:0;transform:scale(1.2);mask:url(/icons/description_gray.svg?mode=light) no-repeat center;-webkit-mask:url(/icons/description_gray.svg?mode=light) no-repeat center;background-color:rgba(71, 70, 68, 0.6);fill:rgba(71, 70, 68, 0.6)"></div></span>한줄 소개</th></tr></thead><tbody><tr id="ad9239e7-5b95-4d3b-b97e-748fa877d9ef"><td class="cell-title"><a href="https://www.notion.so/VR-ad9239e75b954d3bb97e748fa877d9ef?pvs=21"><span class="icon">🚙</span>VR 메타버스 운전면허 시험장</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-pink">Arduino</span><span class="selected-value select-value-color-green">C#</span><span class="selected-value select-value-color-yellow">Oculus</span><span class="selected-value select-value-color-gray">Unity</span><span class="selected-value select-value-color-purple">팀 프로젝트</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2022년 3월 2일 → 2022년 12월 8일</time></td><td class="cell-U&gt;EJ">VR을 이용한 메타버스 운전 면허 기능을 연습할 수 있는 서비스</td></tr><tr id="c442368c-92b2-4b5c-a772-68fdd776300e"><td class="cell-title"><a href="https://www.notion.so/Quantum-Tec-c442368c92b24b5ca77268fdd776300e?pvs=21"><span class="icon">📄</span>Quantum Tec</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-purple">Java</span><span class="selected-value select-value-color-yellow">Javascript</span><span class="selected-value select-value-color-red">Mysql</span><span class="selected-value select-value-color-default">React</span><span class="selected-value select-value-color-gray">Spring Boot</span><span class="selected-value select-value-color-purple">팀 프로젝트</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2023년 3월 2일 → 2023년 12월 31일</time></td><td class="cell-U&gt;EJ">교육용 게임을 공급하는 플랫폼</td></tr><tr id="fd8e99d9-e889-4204-81d3-d1baa45d1145"><td class="cell-title"><a href="https://www.notion.so/fd8e99d9e889420481d3d1baa45d1145?pvs=21"><img class="icon" src="https://www.notion.so/icons/car_gray.svg"/>프로메테우스</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-brown">Linux</span><span class="selected-value select-value-color-blue">Python</span><span class="selected-value select-value-color-gray">Unity</span><span class="selected-value select-value-color-purple">팀 프로젝트</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2023년 3월 2일 → 2023년 12월 31일</time></td><td class="cell-U&gt;EJ">드론과 같은 장비로 스캔한 뒤 3d 맵으로 출력해주는 프로젝트</td></tr><tr id="3e6cea08-7f7c-4263-9390-a06a2d5d487e"><td class="cell-title"><a href="https://www.notion.so/sendAnywhere-3e6cea087f7c42639390a06a2d5d487e?pvs=21">sendAnywhere프로젝트</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-green">Django</span><span class="selected-value select-value-color-blue">Python</span><span class="selected-value select-value-color-default">개인 프로젝트</span></td><td class="cell-A^RZ"><a href="https://send.mayonedev.com/" class="url-value">https://send.mayonedev.com/</a></td><td class="cell-WkG_"><time>@2023년 12월 15일 → 2023년 12월 16일</time></td><td class="cell-U&gt;EJ">sendAnywhere의 서비스를 대학 보안 과제로 작성한 프로젝트.</td></tr><tr id="ffc9d8bb-e79c-4ad6-815c-74c585d1375f"><td class="cell-title"><a href="https://www.notion.so/ffc9d8bbe79c4ad6815c74c585d1375f?pvs=21"><span class="icon">📖</span>도서 관리 프로그램</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-green">C#</span><span class="selected-value select-value-color-red">Mysql</span><span class="selected-value select-value-color-purple">팀 프로젝트</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2021년 3월 2일 → 2021년 11월 28일</time></td><td class="cell-U&gt;EJ"><mark class="highlight-default">도서관 관리를 위한 프로그램을 개발한 팀 프로젝트.</mark></td></tr><tr id="1db9a34f-e6c9-4084-a8ca-8e048b7d118f"><td class="cell-title"><a href="https://www.notion.so/VR-1db9a34fe6c94084a8ca8e048b7d118f?pvs=21"><span class="icon">🎮</span>VR 리듬게임 프로젝트</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-green">C#</span><span class="selected-value select-value-color-yellow">Oculus</span><span class="selected-value select-value-color-gray">Unity</span><span class="selected-value select-value-color-default">개인 프로젝트</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2021년 9월 1일 → 2021년 12월 4일</time></td><td class="cell-U&gt;EJ">VR을 이용하여 총을 조준하는 리듬게임</td></tr><tr id="e2205129-facf-4de3-a8d5-21c7df7ba6be"><td class="cell-title"><a href="https://www.notion.so/e2205129facf4de3a8d521c7df7ba6be?pvs=21"><span class="icon">🕹️</span>모바일 게임 프로젝트</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-green">C#</span><span class="selected-value select-value-color-gray">Unity</span><span class="selected-value select-value-color-default">개인 프로젝트</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2021년 3월 2일 → 2021년 4월 26일</time></td><td class="cell-U&gt;EJ"><mark class="highlight-default">&#x27;드레곤플라이트&#x27;를 참조하여 진행한 모바일 게임 개발 프로젝트.</mark></td></tr><tr id="9476640c-79e6-4098-8fdd-0a13e6209ea2"><td class="cell-title"><a href="https://www.notion.so/9476640c79e640988fdd0a13e6209ea2?pvs=21"><span class="icon">📺</span>유튜브 자막 팝업 프로그램</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-purple">Java</span><span class="selected-value select-value-color-blue">Python</span><span class="selected-value select-value-color-default">개인 프로젝트</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2021년 1월 1일 → 2022년 5월 11일</time></td><td class="cell-U&gt;EJ"><mark class="highlight-default">유튜브 동영상 재생 시 자막을 별도 화면에 출력하는 프로그램</mark></td></tr><tr id="754b6e51-67ed-4eb4-99dd-ef14e7565cea"><td class="cell-title"><a href="https://www.notion.so/PC-754b6e5167ed4eb499ddef14e7565cea?pvs=21"><span class="icon">💻</span>PC방 관리 프로그램</a></td><td class="cell-fG&gt;e"><span class="selected-value select-value-color-default">Excel</span><span class="selected-value select-value-color-brown">Visual Basic</span><span class="selected-value select-value-color-default">개인 프로젝트</span></td><td class="cell-A^RZ"></td><td class="cell-WkG_"><time>@2018년 9월 1일 → 2018년 12월 14일</time></td><td class="cell-U&gt;EJ">PC방에서 시간추가 등 회원을 관리하는 프로그램</td></tr></tbody></table><br/><br/></div><p id="9761c8c3-7f5c-4040-a0a0-0b9593f4967c" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
