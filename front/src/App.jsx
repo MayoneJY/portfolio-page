@@ -92,49 +92,120 @@ const outsourcing = [
 
 const projects = [
   {
-    name: "디스코드 뮤직 자막 봇",
-    skill: "Python",
+    title: "디스코드 뮤직 자막 봇",
+    image: "/discord-music-bot-cover.png",
+    tags: ["Python", "Discord", "실시간 자막", "Lavalink", "대규모 서비스"],
+    period: "2018.06 ~ 2023.12",
     url: "https://discord.mayonedev.com/",
-    period: "2018.06.01 ~ 2099.12.31",
-    intro: "디스코드에서 음악 감상 및 가사 실시간 제공 서비스",
+    summary: "21만+명, 6천+ 서버에서 사용된 실시간 음악+자막 디스코드 봇. 인증 봇 전환, 동시 트래픽 최적화, 부하 분산 등 대규모 서비스 설계·운영 경험.",
+    detail: [
+    "2018~2023년 누적 217,166명 6,420서버에서 운영.",
+    "인증 봇 전환, Lavalink 도입 등 확장/성능 최적화.",
+    "py-cord, yt-dlp, 버튼 UI, 스트리밍 등 다양한 기능 개발.",
+    "직접 설계, 서비스, 유지보수까지 경험."
+    ]
   },
   {
-    name: "top solved",
-    skill: "Python",
-    url: "https://github.com/MayoneJY/top-solved",
+    title: "top solved",
+    image: "/top-solved-card.png",
+    tags: ["Python", "API", "프로필 카드", "SVG", "백엔드"],
     period: "2025.07.24 ~ 2025.07.25",
-    intro: "http://solved.ac/ 상위 100문제 프로필 카드",
+    url: "https://github.com/MayoneJY/top-solved",
+    summary: "Solved.ac 데이터 기반, 상위 100개 문제를 SVG 카드로 시각화하는 오픈소스 API.",
+    detail: [
+    "실시간 SVG 카드 이미지 자동 생성",
+    "FastAPI + Python으로 구현, 퍼포먼스 최적화",
+    "Baekjoon(백준) 문제 현황 시각화"
+    ]
   },
   {
-    name: "디스코드 발로란트 내전 봇",
-    skill: "Javascript, Python, React",
-    url: "",
+    title: "EBS MATH 제곱근 레이싱",
+    image: "/ebsmath-sqrt-racing.png",
+    tags: ["Javascript", "Figma", "교육게임", "외주", "프론트엔드"],
+    period: "2023.03.26 ~ 2023.06.15",
+    url: "https://www.ebsmath.co.kr/mathquiz/Main?tab=1",
+    summary: "EBS Math 교육 콘텐츠의 플래시 게임을 JS로 재개발. 퍼블리싱, UI 개선, 디바이스 대응.",
+    detail: [
+    "외주 프로젝트로 JS/HTML5 기반 리디자인",
+    "반응형, 키보드·모바일 컨트롤 지원"
+    ]
+  },
+  {
+    title: "redytek 홈페이지",
+    image: "/redytek-homepage.png",
+    tags: ["Javascript", "PHP", "웹사이트", "백엔드", "외주"],
+    period: "2023.03.18 ~ 2023.04.06",
+    url: "http://redytek.co.kr/",
+    summary: "redytek 공식 홈페이지 백엔드 개발. 예약, 게시판 등 서버 로직 구축.",
+    detail: [
+    "PHP+JS 기반 백엔드 구조 설계",
+    "게시판, 예약, 관리자페이지 구현"
+    ]
+  },
+  {
+    title: "디스코드 발로란트 내전 봇",
+    image: "/valorant-inhouse-bot.png",
+    tags: ["Javascript", "Python", "React", "Discord", "게임봇"],
     period: "2024.05.18 ~ 2024.08.31",
-    intro: "내전 스크림 자동화 봇",
-  },
-  {
-    name: "AI와 함께 개발한 네이버 증권뉴스 크롤러",
-    skill: "Python, React, MariaDB",
     url: "",
-    period: "2025.03.06 ~ 2025.03.08",
-    intro: "뉴스 크롤링 및 키워드 검색 사이트",
+    summary: "디스코드 내에서 커맨드 기반 내전(스크림) 매칭, 팀 자동 분배 봇.",
+    detail: [
+    "실시간 매칭/팀 랜덤 배정",
+    "커스텀 설정, 통계 저장, React 기반 대시보드(예정)"
+    ]
   },
   {
-    name: "WebSocket & Chat System",
-    skill: "Javascript, NestJS, React, TypeORM, MariaDB",
-    url: "https://github.com/MayoneJY/nestjs-chat",
+    title: "WebSocket & Chat System",
+    image: "/chat-system.png",
+    tags: ["NestJS", "React", "TypeORM", "Websocket", "MariaDB"],
     period: "2025.01.25 ~ 2025.01.28",
-    intro: "실시간 채팅 시스템",
+    url: "https://github.com/MayoneJY/nestjs-chat",
+    summary: "NestJS + React 기반 실시간 채팅 서비스. 개인 서버 배포 및 실시간 데이터 처리 경험.",
+    detail: [
+    "NestJS Websocket, 실시간 메시지 송수신",
+    "DB 연동 및 TypeORM 구조화, 채팅룸 생성/삭제"
+    ]
   },
   {
-    name: "Allive",
-    skill: "Javascript, Node.js, React",
-    url: "https://live.mayonedev.com/",
-    period: "2024.01.16 ~ 2024.02.04",
-    intro: "국내외 방송 플랫폼 통합 서비스",
+    title: "VR 메타버스 운전면허 시험장",
+    image: "/vr-driving.png",
+    tags: ["Arduino", "C#", "Oculus", "Unity", "VR", "팀프로젝트"],
+    period: "2022.03.02 ~ 2022.12.08",
+    url: "",
+    summary: "Oculus/Unity 기반 VR 운전면허 체험 서비스, 기획~개발~시연까지 주도.",
+    detail: [
+    "교육부 장관상 등 주요 공모전 수상",
+    "아두이노, 하드웨어/소프트웨어 통합",
+    "메타버스 환경 구축 및 기능 구현"
+    ]
   },
-  // ...나머지도 동일하게 추가
+  {
+    title: "Quantum Tec",
+    image: "/quantum-tec.png",
+    tags: ["Java", "Spring Boot", "React", "Mysql", "교육플랫폼", "팀프로젝트"],
+    period: "2023.03.02 ~ 2023.12.31",
+    url: "",
+    summary: "Spring Boot/React 기반 교육용 게임 플랫폼, 풀스택 개발 경험.",
+    detail: [
+    "게임 등록/진행, 관리자 기능 개발",
+    "API/DB 설계, 프론트엔드 연동"
+    ]
+  },
+  {
+    title: "프로메테우스",
+    image: "/prometheus-3dmap.png",
+    tags: ["Linux", "Python", "Unity", "3D맵", "팀프로젝트"],
+    period: "2023.03.02 ~ 2023.12.31",
+    url: "",
+    summary: "드론·장비로 실측 후 3D 맵으로 변환하는 자동화 시스템.",
+    detail: [
+    "Linux, Python으로 데이터 처리",
+    "Unity 기반 3D 시각화"
+    ]
+  },
+  // ...이하 생략, 위 구조대로 추가
 ];
+
 
 const universityProjects = [
   {
@@ -261,17 +332,38 @@ export default function App() {
           <h2 className="text-2xl font-bold border-b-2 border-blue-200 pb-2 mb-4">PROJECTS</h2>
           <ul className="grid md:grid-cols-2 gap-6">
             {projects.map((p, i) => (
-              <li key={i} className="bg-white p-4 rounded-xl shadow">
-                <div className="font-semibold text-lg">{p.name}</div>
-                <div className="flex gap-2 flex-wrap text-xs text-gray-500">{p.skill.split(", ").map((s, i) => <span key={i}>#{s}</span>)}</div>
-                <div className="mt-1 text-gray-700 text-sm">{p.intro}</div>
-                <div className="flex justify-between items-center mt-2">
-                  {p.url && <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">바로가기</a>}
-                  <div className="text-xs text-gray-400">{p.period}</div>
+              <li key={i} className="bg-white p-5 rounded-2xl shadow-lg flex flex-col gap-3 transition hover:shadow-2xl">
+                {/* 이미지 */}
+                <div className="w-full h-40 mb-2 rounded-xl overflow-hidden bg-gray-100 flex items-center justify-center">
+                  <img src={p.image} alt={p.title} className="object-cover h-full w-full" />
                 </div>
+                {/* 태그 */}
+                <div className="flex gap-2 flex-wrap text-xs text-blue-600 font-semibold mb-1">
+                  {p.tags.map((t, idx) => <span key={idx} className="bg-blue-100 rounded-full px-3 py-1">{t}</span>)}
+                </div>
+                {/* 제목, 기간, url */}
+                <div className="flex justify-between items-center">
+                  <div>
+                    <div className="text-lg font-bold">{p.title}</div>
+                    <div className="text-xs text-gray-400">{p.period}</div>
+                  </div>
+                  {p.url && (
+                    <a href={p.url} target="_blank" rel="noopener noreferrer" className="text-blue-500 underline text-xs">
+                      바로가기
+                    </a>
+                  )}
+                </div>
+                {/* 요약 */}
+                <div className="text-gray-700 text-sm mt-1 font-semibold">{p.summary}</div>
+                {/* 상세 */}
+                <ul className="list-disc ml-5 text-sm text-gray-600 space-y-1 mt-2">
+                  {p.detail.map((line, idx) => <li key={idx}>{line}</li>)}
+                </ul>
               </li>
             ))}
           </ul>
+
+
         </section>
 
         <section className="mb-10">
