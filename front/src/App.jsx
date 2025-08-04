@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Github, Mail, Phone, Linkedin, ExternalLink, Award, GraduationCap, Code, Briefcase, Folder, ChevronDown, ChevronUp } from "lucide-react";
+import { Github, Youtube, Mail, Phone, Linkedin, ExternalLink, Award, GraduationCap, Code, Briefcase, Folder, ChevronDown, ChevronUp } from "lucide-react";
 import "./App.css"; // Tailwind CSS import
 
 const profile = {
@@ -8,7 +8,7 @@ const profile = {
   email: "mayone6063@kakao.com",
   phone: "010-9462-6046",
   linkedin: "https://www.linkedin.com/in/%EC%A0%95%EC%97%B0-%EB%82%A8-a83050293/",
-  image: "/me.webp",
+  image: "./me.webp",
 };
 
 const skills = {
@@ -72,10 +72,12 @@ const education = [
 const outsourcing = [
   {
     title: "EBS MATH 제곱근 레이싱",
-    image: "/ebs-1.png",
+    image: "./ebs-1.png",
     tags: ["Javascript", "Canvas API", "Figma", "웹 게임", "FrontEnd", "기업 프로젝트"],
     period: "2023.03.26 ~ 2023.06.15",
     url: "https://www.ebsmath.co.kr/mathquiz/Main?tab=1",
+    youtube: null,
+    github: null,
     summary: "EBS 교육 콘텐츠의 플래시 게임을 JavaScript와 Canvas API로 재구현한 웹 기반 학습 게임 프로젝트.",
     detail: [
         "Canvas API를 활용해 다중 레이어 기반 그래픽, 일시정지·타이머·속도 연동 애니메이션 등 주요 게임 기능 구현.",
@@ -86,10 +88,12 @@ const outsourcing = [
   },
   {
     title: "EBS MATH 삼각형 닮음 카드 게임",
-    image: "/ebs-2.png",
+    image: "./ebs-2.png",
     tags: ["Javascript", "Canvas API", "Figma", "웹 게임", "FrontEnd", "기업 프로젝트"],
     period: "2023.03.26 ~ 2023.06.15",
     url: "https://www.ebsmath.co.kr/mathquiz/Main?tab=1",
+    youtube: null,
+    github: null,
     summary: "EBS 교육 콘텐츠 내 삼각형 닮음 플래시 게임을 웹 기반 카드 게임으로 리디자인하고 JavaScript로 재구현한 프로젝트.",
     detail: [
         "Canvas API 기반으로 카드 선택, 정답 제한, 힌트, 제한시간, 일시정지 등 게임 핵심 기능 구현.",
@@ -100,10 +104,12 @@ const outsourcing = [
   },
   {
     title: "redytek 홈페이지",
-    image: "/redytek.png",
+    image: "./redytek.png",
     tags: ["PHP", "JavaScript", "MySQL", "백엔드", "외주 프로젝트"],
     period: "2023.03.18 ~ 2023.04.06",
     url: "http://redytek.co.kr/",
+    youtube: null,
+    github: null,
     summary: "redytek 공식 홈페이지의 게시판, 로그인, 보안 기능을 PHP 기반으로 구현한 백엔드 중심 외주 프로젝트.",
     detail: [
         "PHP + MySQL 기반으로 게시판, 파일 업로드, 세션 로그인 기능 전체 구현.",
@@ -117,10 +123,12 @@ const outsourcing = [
 const projects = [
   {
     title: "디스코드 뮤직 자막 봇",
-    image: "/musicbot.webp",
+    image: "./musicbot.webp",
     tags: ["Python", "Discord", "실시간 자막", "Lavalink", "대규모 서비스"],
     period: "2018.06 ~ 2023.12",
     url: "https://discord.mayonedev.com/",
+    youtube: "https://www.youtube.com/watch?v=69XVy5Balt4",
+    github: null,
     summary: "디스코드에서 친구들과 통화하며 음악을 감상할 수 있게 해주는 서비스.",
     detail: [
     "2018~2023년 누적 217,166명 6,420서버에서 운영.",
@@ -134,7 +142,9 @@ const projects = [
     image: "https://topsolved.mayonedev.com/api/boj?handle=mayone6063&row=10&base_color=bronze",
     tags: ["Python", "API", "프로필 카드", "SVG", "백엔드"],
     period: "2025.07.24 ~ 2025.07.25",
-    url: "https://github.com/MayoneJY/top-solved",
+    url: null,
+    youtube: null,
+    github: "https://github.com/MayoneJY/top-solved",
     summary: "Solved.ac 데이터 기반, 상위 100개 문제를 SVG 카드로 시각화하는 오픈소스 API.",
     detail: [
     "실시간 SVG 카드 이미지 자동 생성",
@@ -144,10 +154,12 @@ const projects = [
   },
   {
     title: "디스코드 발로란트 내전 봇",
-    image: "/valorant.png",
+    image: "./valorant.png",
     tags: ["Javascript", "Python", "React", "Discord Bot", "백트래킹", "개인 프로젝트"],
     period: "2024.05.18 ~ 2024.08.31",
-    url: "https://github.com/MayoneJY/valorant-discord-bot",
+    url: null,
+    youtube: "https://www.youtube.com/watch?v=UE2nqly_268",
+    github: "https://github.com/MayoneJY/valorant-discord-bot",
     summary: "디스코드에서 발로란트 스크림을 쉽게 진행할 수 있도록 도와주는 팀 자동 편성 및 통화방 분리 기능 제공 봇.",
     detail: [
       "discord.py 기반으로 봇 제작, 기존 오픈소스를 fork해 로그인 및 파티 기능 개선.",
@@ -157,10 +169,12 @@ const projects = [
   },
   {
     title: "AI와 함께 개발한 네이버 증권뉴스 크롤러",
-    image: "/news.webp",
+    image: "./news.webp",
     tags: ["Python", "React", "FastAPI", "MariaDB", "웹 크롤링"],
     period: "2025.03.06 ~ 2025.03.08",
     url: null,
+    youtube: null,
+    github: null,
     summary: "네이버 금융 뉴스의 검색 기능 부재 문제를 해결하기 위해 자동 크롤링 및 키워드 검색 기능을 제공하는 웹 애플리케이션.",
     detail: [
         "FastAPI와 MariaDB를 기반으로 네이버 금융 뉴스 실시간 크롤링 시스템 구현.",
@@ -171,10 +185,12 @@ const projects = [
   },
   {
     title: "WebSocket & Chat System",
-    image: "/chat.png",
+    image: "./chat.png",
     tags: ["Javascript", "NestJS", "React", "WebSocket", "TypeORM", "mariadb"],
     period: "2025.01.25 ~ 2025.01.28",
-    url: "https://github.com/MayoneJY/nestjs-chat",
+    url: null,
+    youtube: null,
+    github: "https://github.com/MayoneJY/nestjs-chat",
     summary: "NestJS와 WebSocket을 활용한 실시간 채팅 및 채팅 기록 저장 시스템.",
     detail: [
         "WebSocket 기반 실시간 채팅 및 채팅방 생성/제거 이벤트 모니터링 기능 구현.",
@@ -184,10 +200,12 @@ const projects = [
   },
   {
     title: "Allive",
-    image: "/alive.webp",
+    image: "./alive.webp",
     tags: ["Javascript", "Node.js", "React", "크롤링", "멀티 플랫폼"],
     period: "2024.01.16 ~ 2024.02.04",
     url: null,
+    youtube: null,
+    github: null,
     summary: "치지직, 트위치, 아프리카TV를 한 번에 모아보는 실시간 방송 통합 시청 플랫폼.",
     detail: [
         "트위치/치지직 API, 아프리카 크롤링을 통해 방송 중인 스트리머 정보를 통합 수집 및 시각화.",
@@ -197,10 +215,12 @@ const projects = [
   },
   {
     title: "디스코드 입퇴장 알림 봇",
-    image: "/discord-exit.webp",
+    image: "./discord-exit.webp",
     tags: ["Python", "Discord Bot", "TTS", "개인 프로젝트"],
     period: "2023.12.08",
-    url: "https://github.com/MayoneJY/Discord-entry-exit-tts-bot",
+    url: null,
+    youtube: null,
+    github: "https://github.com/MayoneJY/Discord-entry-exit-tts-bot",
     summary: "디스코드 음성채널 내에서 사용자의 입퇴장 및 채팅을 TTS 음성으로 출력하는 실시간 알림 봇.",
     detail: [
         "사용자 요청 기반으로 입퇴장 및 채팅 인식 후 음성 출력 기능 기획 및 구현.",
@@ -210,10 +230,12 @@ const projects = [
   },
   {
     title: "수락고 카카오 챗봇",
-    image: "/kakao.png",
+    image: "./kakao.png",
     tags: ["PHP", "MySQL", "웹 파싱", "카카오 챗봇", "개인 프로젝트"],
     period: "2017.11.01 ~ 2017.12.31",
     url: "https://pf.kakao.com/_xdtxjpd",
+    youtube: null,
+    github: null,
     summary: "모교 학생들을 위해 급식·날씨·버스 정보를 제공하는 카카오 플러스 친구 챗봇 서비스.",
     detail: [
         "PHP 기반으로 웹 파싱 기능을 구현하여 실시간 급식·날씨·버스 정보 제공.",
@@ -222,10 +244,12 @@ const projects = [
   },
   {
     title: "디스코드 Chat GPT 봇 with AWS",
-    image: "/discord-gpt.webp",
+    image: "./discord-gpt.webp",
     tags: ["Python", "OpenAI API", "Discord Bot", "Slack", "AWS Cloud9", "개인 프로젝트"],
     period: "2023.03.14",
     url: null,
+    youtube: null,
+    github: null,
     summary: "디스코드와 슬랙에서 ChatGPT API를 실시간으로 사용할 수 있는 멀티플랫폼 챗봇 프로젝트.",
     detail: [
         "Python 기반으로 Discord 및 Slack에서 동작하는 GPT 챗봇 시스템 개발.",
@@ -235,10 +259,12 @@ const projects = [
   },
   {
     title: "중대 급 병역관리 프로그램",
-    image: "/gradients_3.png",
+    image: "./gradients_3.png",
     tags: ["Excel", "VBA", "자동화", "개인 프로젝트"],
     period: "2019.03.19 ~ 2020.10.21",
     url: null,
+    youtube: null,
+    github: null,
     summary: "중대 병사들의 근무 및 외출·외박 관리 업무를 자동화한 엑셀 기반 병역관리 프로그램.",
     detail: [
         "병사 외출/외박/휴가 및 근무표 자동화로 업무 시간을 수 시간에서 수 초로 단축.",
@@ -254,10 +280,12 @@ const projects = [
 const universityProjects = [
   {
     title: "VR 메타버스 운전면허 시험장",
-    image: "/vr.webp",
+    image: "./vr.webp",
     tags: ["Unity", "C#", "Arduino", "Oculus", "VR", "팀 프로젝트"],
     period: "2022.03.02 ~ 2022.12.08",
-    url: "https://github.com/MayoneJY/Metaverse-Driver-s-License-Skill-Test",
+    url: null,
+    youtube: ["https://www.youtube.com/watch?v=JHaxMVDB59M","https://youtu.be/F6Y3wh4U-TE?t=500"],
+    github: "https://github.com/MayoneJY/Metaverse-Driver-s-License-Skill-Test",
     summary: "Unity와 Oculus를 활용해 실제 면허시험장 환경을 VR로 구현한 운전면허 기능시험 시뮬레이터.",
     detail: [
         "위성지도 기반 도봉운전면허시험장을 현실감 있게 재현하고, 자동차의 물리적 움직임 구현.",
@@ -268,10 +296,12 @@ const universityProjects = [
   },
   {
     title: "Quantum Tec",
-    image: "/gamepage.webp",
+    image: "./gamepage.webp",
     tags: ["Java", "Spring Boot", "React", "MySQL", "JavaScript", "팀 프로젝트"],
     period: "2023.03.02 ~ 2023.12.31",
     url: null,
+    youtube: null,
+    github: null,
     summary: "교육용 게임을 공급하고 구매·평가·아바타 시스템을 포함한 기능을 제공하는 통합 게임 플랫폼.",
     detail: [
         "69개 테이블 규모의 복잡한 DB 설계 및 Spring Boot 기반 REST API 개발 전담.",
@@ -282,10 +312,12 @@ const universityProjects = [
   },
   {
     title: "프로메테우스",
-    image: "/scanning.webp",
+    image: "./scanning.webp",
     tags: ["Linux", "Python", "Unity", "ROS", "3D맵", "팀프로젝트"],
     period: "2023.03.02 ~ 2023.12.31",
-    url: "",
+    url: null,
+    youtube: null,
+    github: null,
     summary: "드론과 같은 장비로 스캔한 뒤 3d 맵으로 출력해주는 프로젝트.",
     detail: [
         "ROS 기반으로 라이다·깊이 카메라 데이터를 받아와 UDP로 실시간 전송하는 기능 구현.",
@@ -295,10 +327,12 @@ const universityProjects = [
   },
   {
     title: "sendAnywhere 프로젝트",
-    image: "/sendanywhere.webp",
+    image: "./sendanywhere.webp",
     tags: ["Python", "Django", "암호화", "보안", "개인 프로젝트"],
     period: "2023.12.15 ~ 2023.12.16",
-    url: "https://send.mayonedev.com/",
+    url: null,
+    youtube: null,
+    github: null,
     summary: "sendAnywhere 서비스를 분석하여 보안 기반의 파일 전송 기능을 Django로 구현한 과제형 프로젝트.",
     detail: [
         "Django 기반으로 파일 업로드, 암호 설정, 암호화·복호화 기능 구현.",
@@ -309,10 +343,12 @@ const universityProjects = [
   },
   {
     title: "도서 관리 프로그램",
-    image: "/manage.png",
+    image: "./manage.png",
     tags: ["C#", "MySQL", "API 연동", "팀 프로젝트"],
     period: "2021.03.02 ~ 2021.11.28",
     url: null,
+    youtube: null,
+    github: null,
     summary: "도서관 대출, 회원 관리, 주소 연동 등의 기능을 포함한 Windows 기반 도서 관리 프로그램.",
     detail: [
         "요구사항 분석, DB 설계, 화면 기획 등 전체 프로세스에 참여하고 대부분 기능을 개발.",
@@ -322,10 +358,12 @@ const universityProjects = [
   },
   {
     title: "VR 리듬게임 프로젝트",
-    image: "/vr-game.png",
+    image: "./vr-game.png",
     tags: ["C#", "Unity", "Oculus", "BPM 분석", "개인 프로젝트"],
     period: "2021.09.01 ~ 2021.12.04",
     url: null,
+    youtube: null,
+    github: null,
     summary: "VR 환경에서 음악의 박자에 맞춰 총을 조준하는 리듬 게임과 음원 트랙 자동 생성기를 개발한 개인 프로젝트.",
     detail: [
         "Oculus 기반 Unity 프로젝트로 VR 몰입형 리듬 슈팅 게임 개발."
@@ -333,10 +371,12 @@ const universityProjects = [
   },
   {
     title: "모바일 게임 프로젝트",
-    image: "/vr-game-2.png",
+    image: "./vr-game-2.png",
     tags: ["C#", "Unity", "모바일 게임", "개인 프로젝트"],
     period: "2021.03.02 ~ 2021.04.26",
     url: null,
+    youtube: null,
+    github: null,
     summary: "'드래곤플라이트'를 참조해 메커니즘을 분석하고 자체 게임을 설계·개발한 Unity 기반 모바일 게임 프로젝트.",
     detail: [
         "한국 대표 모바일 게임인 드래곤플라이트의 게임 흐름과 구성요소를 분석.",
@@ -346,10 +386,12 @@ const universityProjects = [
   },
   {
     title: "유튜브 자막 팝업 프로그램",
-    image: "/youtube-cc.webp",
+    image: "./youtube-cc.webp",
     tags: ["Java", "Python", "자막 팝업", "개인 프로젝트"],
     period: "2021.01.01 ~ 2022.05.11",
     url: null,
+    youtube: null,
+    github: null,
     summary: "유튜브 CC 자막을 별도 팝업 창에서 표시하여 시청자의 자막 가독성을 높인 독립형 자막 출력 프로그램.",
     detail: [
         "유튜브 영상 재생 시 CC 자막을 추출해 독립된 팝업 화면에 출력하는 기능 구현.",
@@ -360,10 +402,12 @@ const universityProjects = [
   },
   {
     title: "PC방 관리 프로그램",
-    image: "/pc.png",
+    image: "./pc.png",
     tags: ["Excel", "Visual Basic", "PC방 시스템", "개인 프로젝트"],
     period: "2018.09.01 ~ 2018.12.14",
     url: null,
+    youtube: null,
+    github: null,
     summary: "PC방 사용자 관리와 시간 추가 기능을 엑셀과 Visual Basic을 활용해 구현한 관리용 데스크탑 프로그램.",
     detail: [
         "Excel을 데이터베이스로 활용해 사용자 정보, 이용 시간 등 핵심 데이터 관리 기능 구현.",
@@ -399,16 +443,50 @@ const ProjectCard = ({ project, isExpanded, onToggle }) => (
         <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
           {project.title}
         </h3>
-        {project.url && (
-          <a 
-            href={project.url} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition-colors"
-          >
-            <ExternalLink size={16} />
-          </a>
-        )}
+        <div className="flex gap-2">
+          {/* project.youtube가 존재하고 배열일 경우 */}
+          {project.youtube && Array.isArray(project.youtube) && project.youtube.length > 0 && project.youtube.map((item, idx) => (
+            <a
+              href={item}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition-colors"
+            >
+              <Youtube size={20} />
+            </a>
+          ))}
+          {/* project.youtube가 존재하고 string일 경우 */}
+          {project.youtube && typeof project.youtube === 'string' && (
+            <a
+              href={project.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition-colors"
+            >
+              <Youtube size={20} />
+            </a>
+          )}
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition-colors"
+            >
+              <Github size={20} />
+            </a>
+          )}
+          {project.url && (
+            <a 
+              href={project.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-blue-600 hover:text-blue-800 transition-colors"
+            >
+              <ExternalLink size={20} />
+            </a>
+          )}
+          </div>
       </div>
       
       <p className="text-sm text-gray-500 mb-3">{project.period}</p>
