@@ -9,7 +9,7 @@ export const profile = {
 };
 
 export const skills = {
-  Backend: ["Python", "Java", "Node.js", "Spring Boot", "Unity", "Postman"],
+  Backend: ["Python", "Java", "Node.js", "Spring Boot", "Postman"],
   DevOps: ["Mysql", "MariaDB", "Tomcat", "Linux Ubuntu"],
   Frontend: ["React", "JavaScript", "Bootstrap"],
   Etc: ["VS Code", "Eclipse", "Notion", "Figma", "After Effects", "Photoshop", "FileZilla"],
@@ -57,7 +57,7 @@ export const education = [
 export const featuredProject = {
   title: "디스코드 뮤직 자막 봇",
   image: "./musicbot.webp",
-  tags: ["Python", "Discord", "Lavalink", "Streaming", "Subtitles", "대규모 트래픽"],
+  tags: ["Python", "Discord", "Lavalink", "Streaming", "실시간 자막", "대규모 트래픽"],
   period: "2023.04 ~ 2023.12",
   url: "https://discord.mayonedev.com/",
   youtube: "https://www.youtube.com/watch?v=69XVy5Balt4",
@@ -66,7 +66,7 @@ export const featuredProject = {
   stats: {
     users: "217,166+",
     servers: "6,420",
-    dailyPlays: "18,000+ (평일 기준)"
+    dailyPlays: "65,000+"
   },
 };
 
@@ -74,22 +74,6 @@ export const featuredProject = {
 
 
 export const projects = [
-  {
-    title: "디스코드 뮤직 자막 봇",
-    image: "./musicbot.webp",
-    tags: ["Python", "Discord", "실시간 자막", "Lavalink", "대규모 서비스"],
-    period: "2018.06 ~ 2023.12",
-    url: "https://discord.mayonedev.com/",
-    youtube: "https://www.youtube.com/watch?v=69XVy5Balt4",
-    github: null,
-    summary: "디스코드에서 친구들과 통화하며 음악을 감상할 수 있게 해주는 서비스.",
-    detail: [
-    "2018~2023년 누적 217,166명 6,420서버에서 운영.",
-    "인증 봇 전환, Lavalink 도입 등 확장/성능 최적화.",
-    "py-cord, yt-dlp, 버튼 UI, 스트리밍 등 다양한 기능 개발.",
-    "직접 설계, 서비스, 유지보수까지 경험."
-    ]
-  },
   {
     title: "top solved",
     image: "https://topsolved.mayonedev.com/api/boj?handle=mayone6063&row=10&base_color=bronze",
@@ -108,7 +92,7 @@ export const projects = [
   {
     title: "디스코드 발로란트 내전 봇",
     image: "./valorant.png",
-    tags: ["Javascript", "Python", "React", "Discord Bot", "백트래킹", "개인 프로젝트"],
+    tags: ["Javascript", "Python", "React", "Discord Bot", "백트래킹"],
     period: "2024.05.18 ~ 2024.08.31",
     url: null,
     youtube: "https://www.youtube.com/watch?v=UE2nqly_268",
@@ -123,7 +107,7 @@ export const projects = [
   {
     title: "WebSocket & Chat System",
     image: "./chat.png",
-    tags: ["Javascript", "NestJS", "React", "WebSocket", "TypeORM", "mariadb"],
+    tags: ["NestJS", "React", "WebSocket", "TypeORM", "mariadb"],
     period: "2025.01.25 ~ 2025.01.28",
     url: null,
     youtube: null,
@@ -149,22 +133,6 @@ export const projects = [
         "카카오 플러스 친구 API를 활용해 사용자와의 인터랙션 챗봇 구축."
     ]
   },
-  {
-    title: "중대 급 병역관리 프로그램",
-    image: "./gradients_3.png",
-    tags: ["Excel", "VBA", "자동화", "개인 프로젝트"],
-    period: "2019.03.19 ~ 2020.10.21",
-    url: null,
-    youtube: null,
-    github: null,
-    summary: "중대 병사들의 근무 및 외출·외박 관리 업무를 자동화한 엑셀 기반 병역관리 프로그램.",
-    detail: [
-        "병사 외출/외박/휴가 및 근무표 자동화로 업무 시간을 수 시간에서 수 초로 단축.",
-        "개별 병사 기록 페이지 및 외출·외박증 자동 출력 기능으로 반복 업무 간소화.",
-        "코로나19 대응을 위한 부대 현황판 제작 등 시기별 필요 기능 적극 반영.",
-        "엑셀과 VBA만으로 제한된 환경에서 자동화 시스템을 구현한 실무 최적화 경험."
-    ]
-  }
   // ...이하 생략, 위 구조대로 추가
 ];
 
@@ -189,7 +157,7 @@ export const universityProjects = [
   {
     title: "Quantum Tec",
     image: "./gamepage.webp",
-    tags: ["Java", "Spring Boot", "React", "MySQL", "JavaScript", "팀 프로젝트"],
+    tags: ["Spring Boot", "React", "MySQL", "JavaScript", "팀 프로젝트"],
     period: "2023.03.02 ~ 2023.12.31",
     url: null,
     youtube: null,
@@ -200,21 +168,6 @@ export const universityProjects = [
         "게시판·상점·관리자 페이지를 포함한 주요 화면을 React + Bootstrap으로 디자인 및 구현.",
         "Redux 기반 상태 관리 및 토스페이먼츠 결제 API 연동.",
         "저작권 등록 완료."
-    ]
-  },
-  {
-    title: "프로메테우스",
-    image: "./scanning.webp",
-    tags: ["Linux", "Python", "Unity", "ROS", "3D맵", "팀프로젝트"],
-    period: "2023.03.02 ~ 2023.12.31",
-    url: null,
-    youtube: null,
-    github: null,
-    summary: "드론과 같은 장비로 스캔한 뒤 3d 맵으로 출력해주는 프로젝트.",
-    detail: [
-        "ROS 기반으로 라이다·깊이 카메라 데이터를 받아와 UDP로 실시간 전송하는 기능 구현.",
-        "정지 상태 및 이동 중에도 안정적인 3D 공간 스캔 및 맵 시각화 구현 성공.",
-        "정확도와 속도 간 트레이드오프를 조율하며 위치 파악 알고리즘을 활용.",
     ]
   },
   {
@@ -231,21 +184,6 @@ export const universityProjects = [
         "파일 전송 시 일련번호 생성 및 암호 입력을 통해 접근 제어 기능 적용.",
         "새로고침 시 중복 업로드 문제를 예외 처리하며 안정성 확보.",
         "Caddy 서버를 활용해 서브도메인 적용 및 보안 흐름에 대한 기본 이해 향상."
-    ]
-  },
-  {
-    title: "모바일 게임 프로젝트",
-    image: "./vr-game-2.png",
-    tags: ["C#", "Unity", "모바일 게임", "개인 프로젝트"],
-    period: "2021.03.02 ~ 2021.04.26",
-    url: null,
-    youtube: null,
-    github: null,
-    summary: "'드래곤플라이트'를 참조해 메커니즘을 분석하고 자체 게임을 설계·개발한 Unity 기반 모바일 게임 프로젝트.",
-    detail: [
-        "한국 대표 모바일 게임인 드래곤플라이트의 게임 흐름과 구성요소를 분석.",
-        "분석한 메커니즘을 바탕으로 새로운 비행 슈팅 게임 구조와 UI/UX 설계.",
-        "Unity와 C#을 활용하여 기본적인 게임 시스템과 캐릭터 조작 기능 구현."
     ]
   },
   {
@@ -271,7 +209,7 @@ export const outsourcing = [
   {
     title: "EBS MATH 제곱근 레이싱",
     image: "./ebs-1.png",
-    tags: ["Javascript", "Canvas API", "Figma", "웹 게임", "FrontEnd", "기업 프로젝트"],
+    tags: ["Javascript", "Canvas API", "웹 게임", "FrontEnd", "기업 프로젝트"],
     period: "2023.03.26 ~ 2023.06.15",
     url: "https://www.ebsmath.co.kr/mathquiz/Main?tab=1",
     youtube: null,
@@ -287,7 +225,7 @@ export const outsourcing = [
   {
     title: "EBS MATH 삼각형 닮음 카드 게임",
     image: "./ebs-2.png",
-    tags: ["Javascript", "Canvas API", "Figma", "웹 게임", "FrontEnd", "기업 프로젝트"],
+    tags: ["Javascript", "Canvas API", "웹 게임", "FrontEnd", "기업 프로젝트"],
     period: "2023.03.26 ~ 2023.06.15",
     url: "https://www.ebsmath.co.kr/mathquiz/Main?tab=1",
     youtube: null,

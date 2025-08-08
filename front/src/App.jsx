@@ -34,12 +34,20 @@ const ProjectCard = ({ project, isExpanded, onToggle }) => (
           {project.title}
         </h3>
         <div className="flex gap-2">
-          {project.youtube && (
-            <a href={project.youtube} target="_blank" rel="noopener noreferrer"
-               className="text-gray-600 hover:text-red-600">
-              <Youtube size={18} />
-            </a>
-          )}
+          {Array.isArray(project.youtube)
+            ? project.youtube.map((yt, idx) => (
+                <a key={idx} href={yt} target="_blank" rel="noopener noreferrer"
+                   className="text-gray-600 hover:text-red-600">
+                  <Youtube size={18} />
+                </a>
+              ))
+            : project.youtube && (
+                <a href={project.youtube} target="_blank" rel="noopener noreferrer"
+                   className="text-gray-600 hover:text-red-600">
+                  <Youtube size={18} />
+                </a>
+              )
+          }
           {project.github && (
             <a href={project.github} target="_blank" rel="noopener noreferrer"
                className="text-gray-600 hover:text-gray-900">
@@ -137,14 +145,18 @@ export default function App() {
                 <div className="flex justify-center mb-6">
                   <iframe width="560" height="315" className="" src="https://www.youtube.com/embed/69XVy5Balt4?si=Ennp5gzRB4aBuOoJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center p-4 bg-gray-50 rounded">
                     <div className="text-2xl font-bold text-blue-600">{featuredProject.stats.users}</div>
-                    <div className="text-sm text-gray-600">최대 사용자</div>
+                    <div className="text-sm text-gray-600">최고 사용자</div>
                   </div>
                   <div className="text-center p-4 bg-gray-50 rounded">
                     <div className="text-2xl font-bold text-blue-600">{featuredProject.stats.servers}</div>
-                    <div className="text-sm text-gray-600">최대 서버 수</div>
+                    <div className="text-sm text-gray-600">최고 서버 수</div>
+                  </div>
+                  <div className="text-center p-4 bg-gray-50 rounded">
+                    <div className="text-2xl font-bold text-blue-600">{featuredProject.stats.dailyPlays}</div>
+                    <div className="text-sm text-gray-600">하루 최고 재생 수</div>
                   </div>
                 </div>
 
